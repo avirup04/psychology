@@ -1,11 +1,4 @@
-/* =====================================
-Template Name: 	Mediplus.
-Author Name: Naimur Rahman
-Website: http://wpthemesgrid.com/
-Description: Mediplus - Doctor HTML Template.
-Version:	1.1
-========================================*/   
-/* Tablet Screen */
+
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 /* Header Sticky */
 .section{
@@ -58,6 +51,7 @@ Version:	1.1
 	margin-right: 25px;
 	color: #2C2D3F;
 	font-size: 13px;
+	float: none; /* Ensure inline-block is respected */
 }
 .header .header-inner .get-quote {
 	margin-top: 12px;
@@ -366,12 +360,66 @@ Version:	1.1
 .footer .footer-top {
 	padding: 65px 0px;
 }
+/* 
+/* Default navigation styles */
+/* .navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
 
+/* Hide the menu for small screens */
+@media (max-width: 768px) {
+    .main-menu {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background: #333;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1000;
+    }
 
+    .main-menu.active {
+        display: flex; /* Show when active */
+    }
 
+    .nav.menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
 
+    .nav.menu li {
+        width: 100%;
+        padding: 10px;
+    }
 
+    .nav.menu li a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        padding: 12px;
+        background: #444;
+        color: white;
+        border-bottom: 1px solid #555;
+    }
 
+    /* Hamburger menu */
+    .menu-toggle {
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+        text-align: center;
+        padding: 12px;
+        background: #222;
+        color: white;
+        width: 100%;
+    }
+}
 
 
 }
@@ -492,9 +540,13 @@ Version:	1.1
 	-moz-box-shadow: 0 1px 0 rgba(0,0,0,.25);
 	box-shadow: 0 1px 0 rgba(0,0,0,.25);
 }
-.header .main-menu{
-	display:none 
-}
+
+
+/* nav bar */
+
+
+
+
 .header .widget-main {
 	float: right;
 	display: none;
@@ -895,7 +947,7 @@ Version:	1.1
 	height: 300px;
 }
 .contact-us #myMap {
-	height: 300px;
+	height: 0px;
 }
 .contact-us .contact-us-form h2 {
 	font-size: 25px;
@@ -1025,8 +1077,82 @@ Version:	1.1
 	padding: 20px 0;
 }
 
+    .main-menu {
+        display: none;
+        flex-direction: row;
+        text-align: center;
+        background: #333;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1000;
+    }
 
+    .main-menu.active {
+        display: flex; /* Show when active */
+    }
+
+    .nav.menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .nav.menu li {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .nav.menu li a {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        padding: 12px;
+        background: #444;
+        color: white;
+        border-bottom: 1px solid #555;
+    }
+
+    /* Hamburger menu */
+    .menu-toggle {
+        display: block;
+        font-size: 22px;
+        cursor: pointer;
+        text-align: center;
+        padding: 2px;
+        background: #0099fe;
+        color: white;
+        width: 100%;
+    }
+
+    .menu-toggle:hover {
+        background: #444;
+    }
+
+    /* Ensure dropdowns are styled properly */
+    .nav.menu li .dropdown {
+        display: none;
+        flex-direction: column;
+        background: #0099ff;
+    }
+
+    .nav.menu li:hover .dropdown {
+        display: flex;
+    }
+
+    .nav.menu li .dropdown li a {
+        padding: 10px;
+        background: #555;
+        color: white;
+    }
+
+    .nav.menu li .dropdown li a:hover {
+        background: #666;
+    }
 }
+
 /* Mobile Screen */
 @media only screen and (max-width: 450px) {
 
@@ -1299,10 +1425,15 @@ Version:	1.1
 .footer .footer-top {
 	padding: 65px 0px;
 }
-
-
-
-
-
-
 }
+
+/* Additional mobile improvements */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    .container {
+        padding: 0 10px;
+    }
+}
+

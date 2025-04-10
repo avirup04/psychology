@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Hardcoded credentials for demonstration
     $valid_username = 'admin';
-    $valid_password = 'pass@321$';
+    $valid_password = '12345';
 
     if ($username == $valid_username && $password == $valid_password) {
         // Set session variable to indicate the user is logged in
