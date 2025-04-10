@@ -13,6 +13,7 @@
 
 	<!-- Title -->
 	<title>Appointment</title>
+	<link rel="icon" href="img/title_ico.ico">
 
 	<?php
 	include 'link.php'
@@ -173,26 +174,33 @@
 <script>
 	const SelectElem = x => document.querySelector(x);
 
-	const name = SelectElem("#name")
-	const email = SelectElem("#email")
-	const phone = SelectElem("#phone")
-	const datepicker = SelectElem("#datepicker")
-	const msg = SelectElem("#msg")
+const name = SelectElem("#name")
+const email = SelectElem("#email")
+const phone = SelectElem("#phone")
+const datepicker = SelectElem("#datepicker")
+const msg = SelectElem("#msg")
 
-	SelectElem('#book_app').onclick = () => {
-		const SIR_PH_NO = "9830527645"
-		if (name.value == "" && email.value == "" && phone.value == "" && datepicker.value == "" && msg.value == "") {
-			alert("Error")
-		} else {
-			const whatsappMessage = `Name: ${encodeURIComponent(name.value)}\nEmail: ${encodeURIComponent(email.value)}\nPhone: ${encodeURIComponent(phone.value)}\nDate: ${encodeURIComponent(datepicker.value)}\nMessage: ${encodeURIComponent(msg.value)}`;
+SelectElem('#book_app').onclick = () => {
+    const SIR_PH_NO = "9163899690";
+    if (name.value == "" && email.value == "" && phone.value == "" && datepicker.value == "" && msg.value == "") {
+        alert("Error");
+    } else {
+        const whatsappMessage = `Name: ${name.value}\nEmail: ${email.value}\nPhone: ${phone.value}\nDate: ${datepicker.value}\nMessage: ${msg.value}`;
 
-			// Create the WhatsApp URL
-			const whatsappURL = `https://api.whatsapp.com/send?phone=91${SIR_PH_NO}&text=${encodeURIComponent(whatsappMessage)}`;
+        // Encode the message for URL
+        const encodedMessage = encodeURIComponent(whatsappMessage);
 
-			// Redirect the user to WhatsApp with the pre-filled message
-			window.location.href = whatsappURL;
-		}
-	}
+        // Decode to remove unwanted encoding symbols
+        const cleanMessage = decodeURIComponent(encodedMessage);
+
+        // Create the WhatsApp URL
+        const whatsappURL = `https://api.whatsapp.com/send?phone=91${SIR_PH_NO}&text=${encodeURIComponent(cleanMessage)}`;
+
+        // Redirect the user to WhatsApp with the pre-filled message
+        window.open(whatsappURL, "_blank");
+    }
+};
+
 </script>
 
 </html>

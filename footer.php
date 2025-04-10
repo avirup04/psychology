@@ -10,7 +10,7 @@
 								<p>Be a part of my life's journey, and stay connected by following me on social media for updates, experiences, and insights into my personal adventures.</p>
 								<!-- Social -->
 								<ul class="social">
-									<li><a href="#"><i class="icofont-facebook"></i></a></li>
+									<li><a href="https://www.facebook.com/people/Dipa-Sen/pfbid02B4iV1whC1jDTntpESZY4SfJC2uAWXafKNX8b6CZ7L8TKuJdN4y2mXAMDsWaFBHUkl/?mibextid=ZbWKwL"><i class="icofont-facebook"></i></a></li>
 									<li><a href="#"><i class="icofont-instagram"></i></a></li>
 									<li><a href="#"><i class="icofont-twitter"></i></a></li>
 								</ul>
@@ -41,10 +41,10 @@
 						<div class="col-lg-4 col-md-6 col-12">
 							<div class="single-footer">
 								<h2>Contact Me</h2>
-								<ul class="time-sidual">
-									<li class="day">Phone Number<span>+91 91638 99690</span></li>
-									<li class="day">Mail Id <span>dipapsycholosy.24@gmail.com</span></li>
-									<li class="day">Adress:<span>Bangalaxmi Abasan, Rajarhat Main road, <br> Near Chinar Park, 700136</span></li>
+								<ul class="">
+									<li class=""><b>Phone Number:</b><span> +91 91638 99690</span></li>
+									<li class=""><b>Mail Id:</b><span> dipapsychology.24@gmail.com</span></li>
+									<li class=""><b>Adress:</b><span> Bangalaxmi Abasan, Rajarhat Main road, <br> Near Chinar Park, 700136</span></li>
 								</ul>
 							</div>
 						</div>
@@ -58,7 +58,7 @@
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-12">
 							<div class="copyright-content">
-								<p>© Copyright 2024-2025  |  All Rights Reserved by Educom</p>
+							<p>© Copyright 2024-2025 | All Rights Reserved by <a href="https://github.com/samirdasgit" target="_blank">Educom</a></p>
 							</div>
 						</div>
 					</div>

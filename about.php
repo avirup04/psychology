@@ -12,6 +12,7 @@
 
 	<!-- Title -->
 	<title>About me</title>
+	<link rel="icon" href="img/title_ico.ico">
 
 	<?php
 	include 'link.php'
@@ -160,13 +161,16 @@
 									<h3>Dipa Sen</h3>
 									<br>
 									<h5>
-										<p>M.SpEd, Grad Cert Ed</p>
+										<p>BA in Psychology,</p>
 									</h5>
 									<h5>
-										<p>Special Education Expert &</p>
+										<p>MA in Clinical Psychology, </p>
 									</h5>
 									<h5>
-										<p>Neuro Educational Therapist </p>
+										<p>Diploma in Counselling Psychology &</p>
+									</h5>
+									<h5>
+										<p>Certified Graphologist</p>
 									</h5>
 									<br><br>
 									<h3>Has Experience in</h3>
@@ -175,28 +179,38 @@
 										<div class="col-lg-10">
 											<ul class="list">
 												<h6>
-													<li><i class="fa fa-caret-right"></i>Maecenas vitae luctus nibh.
-														Maecenas vitae luctus Maecenas vitae luctus </li>
+													<li><i class="fa fa-caret-right"></i>Individuals And Group Therapy.
+													</li>
 												</h6><br>
 												<h6>
-													<li><i class="fa fa-caret-right"></i>Duis massa massa. Duis massa
-														massa.Duis massa massa.Duis massa massa.</li>
+													<li><i class="fa fa-caret-right"></i>Cognitive Behavioral Therapy
+														(CBT).</li>
 												</h6><br>
 												<h6>
-													<li><i class="fa fa-caret-right"></i>Aliquam feugiat interdum. Duis
-														massa massa.Duis massa massa.</li>
+													<li><i class="fa fa-caret-right"></i>Person-Centered Therapy.</li>
 												</h6><br>
 												<h6>
-													<li><i class="fa fa-caret-right"></i>Aliquam feugiat interdum. Duis
-														massa massa.Duis massa massa.</li>
+													<li><i class="fa fa-caret-right"></i>Mindfulness-Based Stress
+														Reduction(MBSR)</li>
 												</h6><br>
 												<h6>
-													<li><i class="fa fa-caret-right"></i>Aliquam feugiat interdum. Duis
-														massa massa.Duis massa massa.</li>
+													<li><i class="fa fa-caret-right"></i>Solution-Focused Therapy(SFT).
+													</li>
 												</h6><br>
 												<h6>
-													<li><i class="fa fa-caret-right"></i>Aliquam feugiat interdum. Duis
-														massa massa.Duis massa massa.</li>
+													<li><i class="fa fa-caret-right"></i>Career And Academic
+														Counselling.</li>
+												</h6><br>
+												<h6>
+													<li><i class="fa fa-caret-right"></i>Relationship And Family
+														Counselling.</li>
+												</h6><br>
+												<h6>
+													<li><i class="fa fa-caret-right"></i>Crisis Intervention And Trauma
+														Support.</li>
+												</h6><br>
+												<h6>
+													<li><i class="fa fa-caret-right"></i>Adolescent Counselling.</li>
 												</h6><br>
 											</ul>
 										</div>

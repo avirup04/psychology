@@ -5,277 +5,253 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonial</title>
-    <!-- Meta Tags -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="keywords" content="Site keywords here">
-    <meta name="description" content="">
-    <meta name='copyright' content=''>
+
+    <meta name="keywords" content="Client testimonials, feedback">
+    <meta name="description" content="Read what our satisfied clients have to say.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Dipa Sen</title>
+    <link rel="icon" href="img/title_ico.ico">
 
-    <?php 
-        include 'link.php';
-    ?>
+    <?php include 'link.php'; ?>
 
-<style>
-    .testimonial-section {
-        padding: 50px 0;
-        background-color: #f9f9f9;
-    }
+    <style>
+       .testimonial-section {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
 
-    .testimonial-box {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        margin-bottom: 30px;
-        text-align: center;
-    }
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+}
 
-    .testimonial-box img {
-        width: 100%;
-        height: auto;
-        max-height: 600px;
-        object-fit: cover;
-        border-radius: 8px;
-    }
+.testimonial-card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
 
-    .testimonial-box h5 {
-        margin-top: 15px;
-        font-weight: bold;
-    }
+.testimonial-card:hover {
+    transform: scale(1.05);
+}
 
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 30px;
-        height: 30px;
-    }
+.testimonial-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
 
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 20px;
-        height: 20px;
-        background-size: 100% 100%;
-    }
-</style>
+.testimonial-card h5 {
+    margin: 10px 0 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.testimonial-card p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Lightbox Popup */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+    </style>
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <div class="loader-outter"></div>
-            <div class="loader-inner"></div>
 
-            <div class="indicator">
-                <svg width="16px" height="12px">
-                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
-                </svg>
-            </div>
-        </div>
-    </div>
-    <!-- End Preloader -->
+<div class="preloader">
+		<div class="loader">
+			<div class="loader-outter"></div>
+			<div class="loader-inner"></div>
 
-    <!-- Header Area -->
-    <header class="header">
-        <!-- Header Inner -->
-        <div class="header-inner">
-            <div class="container">
-                <div class="inner">
-                    <div class="row">
-                        <div class="col-lg-2 col-md-3 col-12">
-                            <!-- Start Logo -->
-                            <div class="logo">
-                                <a href="index.php"><img src="img/logo.png" alt="Logo"></a>
-                            </div>
-                            <!-- End Logo -->
-                        </div>
+			<div class="indicator">
+				<svg width="16px" height="12px">
+					<polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+					<polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+				</svg>
+			</div>
+		</div>
+	</div>
 
-                        <div class="col-lg-8 col-md-6 col-12">
-                            <?php include 'nav.php'; ?>
-                        </div>
-
-                        <div class="col-lg-2 col-md-3 col-12">
-                            <div class="get-quote">
-                                <a href="appointment.php" class="btn">Book Consultation</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/ End Header Inner -->
-    </header>
-
-    		<!-- Breadcrumbs -->
-		<div class="breadcrumbs overlay">
+	<header class="header">
+		<!-- Topbar -->
+		<!-- End Topbar -->
+		<!-- Header Inner -->
+		<div class="header-inner">
 			<div class="container">
-				<div class="bread-inner">
+				<div class="inner">
 					<div class="row">
-						<div class="col-12">
-							<h2>Those who were truly satisfied</h2>
-							<ul class="bread-list">
-								<li><a href="index.php">Home</a></li>
-								<li><i class="icofont-simple-right"></i></li>
-								<li class="active">Testimonial</li>
-							</ul>
+						<div class="col-lg-2 col-md-3 col-12">
+							<!-- Start Logo -->
+							<div class="logo">
+								<a href="index.php"><img src="img/logo.png" alt="Logo"></a>
+							</div>
+							<!-- End Logo -->
+						</div>
+
+						<div class="col-lg-8 col-md-6 col-12">
+							<?php include 'nav.php'; ?>
+						</div>
+
+						<div class="col-lg-2 col-md-3 col-12">
+							<div class="get-quote">
+								<a href="appointment.php" class="btn">Book Consultation</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- End Breadcrumbs -->
+
+		<!--/ End Header Inner -->
+	</header>
+    <!-- Header -->
+    <header class="header">
+        <?php include 'nav.php'; ?>
+    </header>
+
+    <!-- Breadcrumbs -->
+    <div class="breadcrumbs overlay">
+        <div class="container">
+            <div class="bread-inner">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <h2>Happy Clients</h2>
+                        <ul class="bread-list">
+                            <li><a href="index.php">Home</a></li>
+                            <li><i class="icofont-simple-right"></i></li>
+                            <li class="active">Testimonial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Testimonial Section -->
     <section class="testimonial-section">
     <div class="container">
-        <h2 class="text-center">Client Testimonials</h2>
-        <br>
-        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#testimonialCarousel" data-slide-to="1"></li>
-                <li data-target="#testimonialCarousel" data-slide-to="2"></li>
-            </ol>
-
-            <!-- Carousel Items -->
-            <div class="carousel-inner">
-                <!-- First Slide -->
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test1.jpg" alt="Client 1" class="img-fluid" width="200" height="200">
-                                <p>"The service provided was excellent and beyond expectations."</p>
-                                <h5>- Client 1</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test2.jpg" alt="Client 2" class="img-fluid">
-                                <p>"Highly professional and knowledgeable. I am very satisfied!"</p>
-                                <h5>- Client 2</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test3.jpg" alt="Client 3" class="img-fluid">
-                                <p>"Great experience, would highly recommend!"</p>
-                                <h5>- Client 3</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Second Slide -->
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test4.jpg" alt="Client 4" class="img-fluid">
-                                <p>"Outstanding support and results!"</p>
-                                <h5>- Client 4</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test5.jpg" alt="Client 5" class="img-fluid">
-                                <p>"They exceeded all my expectations!"</p>
-                                <h5>- Client 5</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test6.jpg" alt="Client 6" class="img-fluid">
-                                <p>"Truly exceptional service!"</p>
-                                <h5>- Client 6</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Third Slide -->
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test13.jpg" alt="Client 7" class="img-fluid">
-                                <p>"Reliable and effective team!"</p>
-                                <h5>- Client 7</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test10.jpg" alt="Client 8" class="img-fluid">
-                                <p>"Absolutely fantastic experience!"</p>
-                                <h5>- Client 8</h5>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="testimonial-box">
-                                <img src="img/test12.jpg" alt="Client 7" class="img-fluid">
-                                <p>"Reliable and effective team!"</p>
-                                <h5>- Client 7</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <h2 class="text-center mb-4">What Our Clients Say</h2>
+        <div class="testimonial-container">
+            <!-- Testimonial Cards -->
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/1.jpg')">
+                <img src="img/testimonials/1.jpg" alt="Client 1">
+                <h5>Client 1 (i)</h5>
+                <p>"The service was top-notch and exceeded my expectations."</p>
             </div>
-
-            <!-- Left and Right Controls -->
-            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/2.jpg')">
+                <img src="img/testimonials/2.jpg" alt="Client 2">
+                <h5>Client 1 (ii)</h5>
+                <p>"Highly professional and knowledgeable. Totally recommend!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/3.jpg')">
+                <img src="img/testimonials/3.jpg" alt="Client 3">
+                <h5>Client 2 (i)</h5>
+                <p>"Absolutely fantastic experience. Will return for sure!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/4.jpg')">
+                <img src="img/testimonials/4.jpg" alt="Client 4">
+                <h5>Client 2 (ii)</h5>
+                <p>"Outstanding customer service. Highly satisfied!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/5.jpg')">
+                <img src="img/testimonials/5.jpg" alt="Client 5">
+                <h5>Client 3</h5>
+                <p>"The team exceeded all my expectations!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/6.jpg')">
+                <img src="img/testimonials/6.jpg" alt="Client 6">
+                <h5>Client 4 (i)</h5>
+                <p>"Truly exceptional service!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/7.jpg')">
+                <img src="img/testimonials/7.jpg" alt="Client 7">
+                <h5>Client 4 (ii)</h5>
+                <p>"Reliable and efficient. Will definitely recommend!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/8.jpg')">
+                <img src="img/testimonials/8.jpg" alt="Client 8">
+                <h5>Client 5 (i)</h5>
+                <p>"Amazing service and great support!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/9.jpg')">
+                <img src="img/testimonials/9.jpg" alt="Client 9">
+                <h5>Client 5 (ii)</h5>
+                <p>"A truly professional and seamless experience!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/10.jpg')">
+                <img src="img/testimonials/10.jpg" alt="Client 10">
+                <h5>Client 6</h5>
+                <p>"Best service I've ever received. Will return for sure!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/11.jpg')">
+                <img src="img/testimonials/11.jpg" alt="Client 11">
+                <h5>Client 7</h5>
+                <p>"Efficient, professional, and friendly!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/12.jpg')">
+                <img src="img/testimonials/12.jpg" alt="Client 12">
+                <h5>Client 8 (i)</h5>
+                <p>"Great communication and results!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/13.jpg')">
+                <img src="img/testimonials/13.jpg" alt="Client 13">
+                <h5>Client 8 (ii)</h5>
+                <p>"Superb quality and attention to detail!"</p>
+            </div>
+            <div class="testimonial-card" onclick="openLightbox('img/testimonials/14.jpg')">
+                <img src="img/testimonials/14.jpg" alt="Client 14">
+                <h5>Client 9</h5>
+                <p>"Fantastic experience from start to finish!"</p>
+            </div>
         </div>
+    </div>
+
+    <!-- Lightbox for Image Popup -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <img id="lightbox-img" src="" alt="Full Image">
     </div>
 </section>
 
+<script>
+function openLightbox(imageSrc) {
+    document.getElementById("lightbox-img").src = imageSrc;
+    document.getElementById("lightbox").style.display = "flex";
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 
     <!-- Footer -->
-    <?php 
-        include 'footer.php';
-    ?>
-
-    <?php 
-        include 'script.php';
-    ?>
-
-    <style>
-        .testimonial-section {
-            padding: 50px 0;
-            background-color: #f9f9f9;
-        }
-
-        .testimonial-box {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .testimonial-box h5 {
-            margin-top: 15px;
-            font-weight: bold;
-        }
-    </style>
-    <script>
-    $(document).ready(function () {
-        $('#testimonialCarousel').carousel({
-            interval: 2000 // Change this value to set the speed (e.g., 2000ms = 2 seconds)
-        });
-    });
-</script>
+    <?php include 'footer.php'; ?>
+    <?php include 'script.php'; ?>
 
 </body>
 
